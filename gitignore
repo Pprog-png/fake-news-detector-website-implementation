@@ -1,0 +1,15 @@
+# API credentials - never commit these!
+api_key
+search_engine_id
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

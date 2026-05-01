@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Identifier</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+</head>
+<body>
+    <div class="white-shading"></div>
+    <div class="loading hidden" id="loading">
+        <div>
+            Checking...
+        </div>
+    </div>
+    <div class="left-side side">
+        <div class="heading">
+                Fake News Identifier
+        </div>
+        <div class="disclaimer-container">
+            <div class="expected">
+                Expected news: World news
+            </div>
+            <div class="disclaimer">Disclaimer
+                <span class="tooltip">The model is trained on older data and may not give correct results to recent news</span>
+            </div>
+        </div>
+        <div class="input-container">
+            <textarea id="input" type="text" class="input" placeholder="Enter the news here..."></textarea>
+            <button id="button" class="button">Check</button>
+        </div>
+    </div>
+    <div class="right-side side" id="back">
+        <div class="result" id="result">—</div>
+        <div class="related">Related news...</div>
+        <div class="info">
+            <div id="news-container" class="news-container">
+
+            </div>
+        </div>
+    </div>
+    <a class="credits" href="credits">Credits</a>
+</body>
+</html>

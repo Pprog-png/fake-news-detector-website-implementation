@@ -1,0 +1,214 @@
+html{
+    height: 100%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 40px);
+    justify-content: center;
+    background: url(background1.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.heading{
+    font-size: 3.5em;
+    color: maroon;
+    height: 15%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.side{
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.76);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.input-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    /* background-color: red; */
+}
+.input{
+    width: 90%;
+    height:  calc(80% - 20px);
+    box-sizing: border-box;
+    background-color: rgba(245, 245, 220, 0.8);
+    border:2px solid grey;
+    outline:none;
+}
+
+.button{
+    transition: all 100ms;
+    width: 90%;
+    height:  calc(20% - 20px);
+    border:2px solid grey;
+    background-color: lightblue;
+    font-size: 2rem;
+}
+
+.button:hover{
+    background-color: rgb(127, 159, 170);
+}
+
+.button:active{
+    background-color: rgb(194, 240, 255);
+}
+
+.info{
+    max-width: 90%;
+    width: 90%;
+    height: 70%;
+    max-height: 70%;
+    overflow-y: scroll;
+    border: 2px solid grey;
+    background-color: rgba(245, 245, 220, 0.8);
+}
+
+.result{
+    font-size: 3rem;
+    height:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.related{
+    font-size: 1.5rem;
+    height: 5%;
+    /* background-color: aqua; */
+    /* width: 90%; */
+}
+
+
+.true{
+    background-color: hsla(120, 100%, 80%, 0.8);
+}
+
+.false{
+    background-color: hsla(0, 100%, 80%, 0.8);
+}
+
+.block{
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    width: auto;
+}
+
+
+a{
+        white-space: pre-wrap; /* CSS3 */    
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */    
+        white-space: -o-pre-wrap; /* Opera 7 */    
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+
+.loading{
+    font-size: 2rem;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+.hidden{
+    display: none;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.loading>div{
+    transition: all 100ms;
+    background-color: rgba(255, 255, 152, 0.774);
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    color: rgb(61, 61, 61);
+    padding:20px;
+    border-radius: 15px;
+}
+
+.credits{
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+}
+
+.white-shading{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: block;
+    z-index: -1;
+}
+
+.disclaimer-container{
+    font-size: 0.8rem;
+    right: 55%;
+    width: 90%;
+    height: 5%;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+   align-items: end;
+}
+
+.disclaimer{
+    color: red;
+    position: relative;
+    width: auto;
+}
+
+.tooltip{
+    visibility: hidden;
+    width: 120px;
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+    border: 1px solid black;
+}
+
+.disclaimer .tooltip::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+
+.disclaimer:hover .tooltip{
+    visibility: visible;
+}
